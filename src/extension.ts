@@ -1,38 +1,26 @@
-import { ExtensionContext, window, OutputChannel, commands } from 'vscode'
-import { executeRunCommand } from './vscode/execute-run-command'
+// The module 'vscode' contains the VS Code extensibility API
+// Import the module and reference it with the alias vscode in your code below
+import * as vscode from 'vscode';
 
-/**
- * The channel we'll be writing our output to.
- */
-const OUTPUT_CHANNEL_NAME = 'just'
+// this method is called when your extension is activated
+// your extension is activated the very first time the command is executed
+export function activate(context: vscode.ExtensionContext) {
+	
+	// Use the console to output diagnostic information (console.log) and errors (console.error)
+	// This line of code will only be executed once when your extension is activated
+	console.log('Congratulations, your extension "just" is now active!');
 
-/**
- * The command key for running a just recipe.
- * 
- * This needs to match up in two places in our `package.json`.
- */
-const RUN_RECIPE_COMMAND_KEY = 'just.run'
+	// The command has been defined in the package.json file
+	// Now provide the implementation of the command with registerCommand
+	// The commandId parameter must match the command field in package.json
+	let disposable = vscode.commands.registerCommand('just.helloWorld', () => {
+		// The code you place here will be executed every time your command is executed
+		// Display a message box to the user
+		vscode.window.showInformationMessage('Hello World from just!');
+	});
 
-/**
- * Fires the first time our extension loads.
- *
- * @param context The vscode context.
- */
-export function activate(context: ExtensionContext) {
-  // the output channel we'll be writing to when we run tasks
-  const outputChannel = window.createOutputChannel(OUTPUT_CHANNEL_NAME)
-
-  // register a command which will allow us to run a recipe
-  context.subscriptions.push(
-    commands.registerCommand(RUN_RECIPE_COMMAND_KEY, async () => {
-      await executeRunCommand(outputChannel)
-    })
-  )
+	context.subscriptions.push(disposable);
 }
 
-/**
- * Fires when our extension dies.
- */
-export function deactivate() {
-  // nothing to do
-}
+// this method is called when your extension is deactivated
+export function deactivate() {}

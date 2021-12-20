@@ -1,92 +1,45 @@
 {
   "name": "just",
-  "displayName": "just",
-  "description": "Provides syntax and recipe launcher for Just scripts.",
-  "version": "2.0.0",
-  "publisher": "skellock",
-  "private": true,
-  "license": "MIT",
-  "icon": "images/robot.png",
-  "engines": {
-    "vscode": "^1.18.0"
-  },
-  "keywords": [
-    "just",
-    "justfile",
-    "make",
-    "scripts",
-    "task",
-    "recipe",
-    "launch"
-  ],
-  "repository": {
-    "url": "https://github.com/skellock/vscode-just.git"
-  },
-  "bugs": {
-    "url": "https://github.com/skellock/vscode-just/issues"
-  },
-  "homepage": "https://github.com/skellock/vscode-just",
-  "categories": [
-    "Languages",
-    "Other"
-  ],
-  "main": "./out/extension",
-  "activationEvents": [
-    "onCommand:just.run"
-  ],
-  "contributes": {
-    "commands": [
-      {
-        "command": "just.run",
-        "title": "Just: Run Recipe"
-      }
-    ],
-    "languages": [
-      {
-        "id": "just",
-        "aliases": [
-          "Just",
-          "just"
-        ],
-        "extensions": [
-          "justfile",
-          "Justfile"
-        ],
-        "configuration": "./language-configuration.json"
-      }
-    ],
-    "grammars": [
-      {
-        "language": "just",
-        "scopeName": "source.just",
-        "path": "./syntaxes/just.tmLanguage.json",
-        "embeddedLanguages": {
-          "meta.embedded.block.js": "javascript",
-          "meta.embedded.block.lua": "lua",
-          "meta.embedded.block.perl": "perl",
-          "meta.embedded.block.ruby": "ruby",
-          "meta.embedded.block.python": "python",
-          "meta.embedded.block.shellscript": "shellscript"
-        }
-      }
-    ]
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "npm run compile && node ./node_modules/vscode/bin/test"
-  },
-  "devDependencies": {
-    "@types/execa": "^0.8.0",
-    "@types/mocha": "^2.2.42",
-    "@types/node": "^7.0.43",
-    "prettier": "^1.9.1",
-    "typescript": "^2.6.1",
-    "vscode": "^1.1.6"
-  },
-  "dependencies": {
-    "execa": "^0.8.0"
-  }
+	"displayName": "just",
+	"description": "Provides syntax and recipe launcher for Just scripts.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.63.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+        "onCommand:just.helloWorld"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "just.helloWorld",
+				"title": "Hello World"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.63.0",
+		"@types/glob": "^7.1.4",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "14.x",
+		"@typescript-eslint/eslint-plugin": "^5.1.0",
+		"@typescript-eslint/parser": "^5.1.0",
+		"eslint": "^8.1.0",
+		"glob": "^7.1.7",
+		"mocha": "^9.1.3",
+		"typescript": "^4.4.4",
+		"@vscode/test-electron": "^1.6.2"
+	}
 }

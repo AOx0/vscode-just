@@ -1,26 +1,9 @@
-# 1.0.3 - Dec 4, 2017
+# Change Log
 
-### Docs
+All notable changes to the "just" extension will be documented in this file.
 
-* Fixes `just` spelling 😊 . PR: #1 thx @casey
+Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-# 1.0.2 - Dec 4, 2017
+## [Unreleased]
 
-### Maintenance
-
-* Moves changelog to `CHANGELOG.md` so it shows in vs code marketplace.
-* Adds a `justfile` for deploying and dogfooding.
-* Adds yarn errors to `.gitignore`.
-* Marks package as `private: true` (for npm).
-
-# 1.0.1 - Dec 4, 2017
-
-### Maintenance
-
-* Updated package.json with more meta data for vs code marketplace
-
-# 1.0.0 - Dec 3, 2017
-
-### Features
-
-* Initial Release
+- Initial release

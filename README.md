@@ -1,56 +1,70 @@
-# just
+# just README
 
-A `Just` language syntax for colourizing your `justfile`s and running recipes.
+This is the README for your extension "just". After writing up a brief description, we recommend including the following sections.
 
-![Just in Code](images/just-demo.gif)
+## Features
 
-# Running A Recipe
+Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
-* `cmd + shift + p` then type `Just: Run Recipe`
-* choose a recipe and press enter
+For example if there is an image subfolder under your extension project workspace:
 
-# What is Just?
+\!\[feature X\]\(images/feature-x.png\)
 
-Just is a task/command/recipe runner. It's a single binary with no dependencies. Small & fast.
+> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
-[Read more](https://github.com/casey/just) about it on their github page.
+## Requirements
 
-# Roadmap
+If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
-* [x] syntax highlighting
-* [x] run recipe
-* [ ] pass arguments to recipes
-* [ ] choose a non-default justfile
-* [ ] tree extension showing recipies and dependencies
+## Extension Settings
 
-# About Just
+Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
-You:
+For example:
 
-* create a file in your project directory called `justfile`
-* add some recipes
-* then run with `just my-recipe` from the command line
+This extension contributes the following settings:
 
-Here's a super quick and unhelpful example of a `justfile`:
+* `myExtension.enable`: enable/disable this extension
+* `myExtension.thing`: set to `blah` to do something
 
-```just
-# behold a recipe
-fun:
-  echo "hi" > tmp.txt
-  cat tmp.txt
-  rm tmp.txt
+## Known Issues
 
-# they can have dependencies
-superfun: fun
-  echo "woah that was fun!"
+Calling out known issues can help limit users opening duplicate issues against your extension.
 
-# and support other inline scripts
-js:
-  #!/usr/bin/env node
-  console.log('woah, seriously?')
+## Release Notes
 
-# great for pulling of things that are hard in the shell
-ruby:
-  #!/usr/bin/env ruby
-  puts "yep."
-```
+Users appreciate release notes as you update your extension.
+
+### 1.0.0
+
+Initial release of ...
+
+### 1.0.1
+
+Fixed issue #.
+
+### 1.1.0
+
+Added features X, Y, and Z.
+
+-----------------------------------------------------------------------------------------------------------
+## Following extension guidelines
+
+Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+
+* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+
+## Working with Markdown
+
+**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+
+* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
+* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
+* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
+
+### For more information
+
+* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
+* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+
+**Enjoy!**
