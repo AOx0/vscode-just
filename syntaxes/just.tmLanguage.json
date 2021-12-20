@@ -2,13 +2,27 @@
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "Just",
   "patterns": [
-    { "include": "#interpolate" },
-    { "include": "#comments" },
-    { "include": "#scripts" },
-    { "include": "#strings" },
-    { "include": "#assignments" },
-    { "include": "#recipeDefinition" },
-    { "include": "#keywords" }
+    {
+      "include": "#interpolate"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#scripts"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#assignments"
+    },
+    {
+      "include": "#recipeDefinition"
+    },
+    {
+      "include": "#keywords"
+    }
   ],
   "repository": {
     "comments": {
@@ -21,12 +35,24 @@
     },
     "scripts": {
       "patterns": [
-        {"include": "#scripts_js"},
-        {"include": "#scripts_lua"},
-        {"include": "#scripts_perl"},
-        {"include": "#scripts_ruby"},
-        {"include": "#scripts_python"},
-        {"include": "#scripts_shell"}
+        {
+          "include": "#scripts_js"
+        },
+        {
+          "include": "#scripts_lua"
+        },
+        {
+          "include": "#scripts_perl"
+        },
+        {
+          "include": "#scripts_ruby"
+        },
+        {
+          "include": "#scripts_python"
+        },
+        {
+          "include": "#scripts_shell"
+        }
       ]
     },
     "scripts_python": {
@@ -36,12 +62,22 @@
           "begin": "(^\\s+)(#!)\\s*(\\S+) (python3?)\\s*$",
           "end": "^$",
           "beginCaptures": {
-            "2":{"name":"markup.italic"},
-            "3":{"name":"markup.italic"},
-            "4":{"name":"keyword.other"}
+            "2": {
+              "name": "markup.italic"
+            },
+            "3": {
+              "name": "markup.italic"
+            },
+            "4": {
+              "name": "keyword.other"
+            }
           },
-          "contentName":"meta.embedded.block.python",
-          "patterns": [{"include": "source.python"}]
+          "contentName": "meta.embedded.block.python",
+          "patterns": [
+            {
+              "include": "source.python"
+            }
+          ]
         }
       ]
     },
@@ -52,12 +88,22 @@
           "begin": "(^\\s+)(#!)\\s*(\\S+) (node)\\s*$",
           "end": "^$",
           "beginCaptures": {
-            "2":{"name":"markup.italic"},
-            "3":{"name":"markup.italic"},
-            "4":{"name":"keyword.other"}
+            "2": {
+              "name": "markup.italic"
+            },
+            "3": {
+              "name": "markup.italic"
+            },
+            "4": {
+              "name": "keyword.other"
+            }
           },
-          "contentName":"meta.embedded.block.javascript",
-          "patterns": [{"include": "source.js"}]
+          "contentName": "meta.embedded.block.javascript",
+          "patterns": [
+            {
+              "include": "source.js"
+            }
+          ]
         }
       ]
     },
@@ -68,12 +114,22 @@
           "begin": "(^\\s+)(#!)\\s*(\\S+) (perl)\\s*$",
           "end": "^$",
           "beginCaptures": {
-            "2":{"name":"markup.italic"},
-            "3":{"name":"markup.italic"},
-            "4":{"name":"keyword.other"}
+            "2": {
+              "name": "markup.italic"
+            },
+            "3": {
+              "name": "markup.italic"
+            },
+            "4": {
+              "name": "keyword.other"
+            }
           },
-          "contentName":"meta.embedded.block.perl",
-          "patterns": [{"include": "source.perl"}]
+          "contentName": "meta.embedded.block.perl",
+          "patterns": [
+            {
+              "include": "source.perl"
+            }
+          ]
         }
       ]
     },
@@ -84,12 +140,22 @@
           "begin": "(^\\s+)(#!)\\s*(\\S+) (ruby)\\s*$",
           "end": "^$",
           "beginCaptures": {
-            "2":{"name":"markup.italic"},
-            "3":{"name":"markup.italic"},
-            "4":{"name":"keyword.other"}
+            "2": {
+              "name": "markup.italic"
+            },
+            "3": {
+              "name": "markup.italic"
+            },
+            "4": {
+              "name": "keyword.other"
+            }
           },
-          "contentName":"meta.embedded.block.ruby",
-          "patterns": [{"include": "source.ruby"}]
+          "contentName": "meta.embedded.block.ruby",
+          "patterns": [
+            {
+              "include": "source.ruby"
+            }
+          ]
         }
       ]
     },
@@ -100,12 +166,22 @@
           "begin": "(^\\s+)(#!)\\s*(\\S+) (lua)\\s*$",
           "end": "^$",
           "beginCaptures": {
-            "2":{"name":"markup.italic"},
-            "3":{"name":"markup.italic"},
-            "4":{"name":"keyword.other"}
+            "2": {
+              "name": "markup.italic"
+            },
+            "3": {
+              "name": "markup.italic"
+            },
+            "4": {
+              "name": "keyword.other"
+            }
           },
-          "contentName":"meta.embedded.block.lua",
-          "patterns": [{"include": "source.lua"}]
+          "contentName": "meta.embedded.block.lua",
+          "patterns": [
+            {
+              "include": "source.lua"
+            }
+          ]
         }
       ]
     },
@@ -116,12 +192,22 @@
           "begin": "(^\\s+)(#!)\\s*(\\S+) ((?>fi|ba|c|k|z)?sh)\\s*$",
           "end": "^$",
           "beginCaptures": {
-            "2":{"name":"markup.italic"},
-            "3":{"name":"markup.italic"},
-            "4":{"name":"keyword.other"}
+            "2": {
+              "name": "markup.italic"
+            },
+            "3": {
+              "name": "markup.italic"
+            },
+            "4": {
+              "name": "keyword.other"
+            }
           },
-          "contentName":"meta.embedded.block.shellscript",
-          "patterns": [{"include": "source.shell"}]
+          "contentName": "meta.embedded.block.shellscript",
+          "patterns": [
+            {
+              "include": "source.shell"
+            }
+          ]
         }
       ]
     },
@@ -149,8 +235,12 @@
         {
           "match": "^(export[\\s]?)?([a-zA-Z_][a-zA-Z0-9_-]*)\\s*:?=",
           "captures": {
-            "1": { "name": "storage.type.just" },
-            "2": { "name": "variable.name.just" }
+            "1": {
+              "name": "storage.type.just"
+            },
+            "2": {
+              "name": "variable.name.just"
+            }
           }
         }
       ]
@@ -160,22 +250,34 @@
         {
           "match": "^(@)?([a-zA-Z_][a-zA-Z0-9_-]*)([a-zA-Z0-9=\\s_-`'\"]*):([\\sa-zA-Z0-9_-]*).*$",
           "captures": {
-            "1": { "name": "entity.name.function.just" },
-            "2": { "name": "entity.name.function.just" },
+            "1": {
+              "name": "entity.name.function.just"
+            },
+            "2": {
+              "name": "entity.name.function.just"
+            },
             "3": {
               "patterns": [
                 {
                   "name": "constant.character.escape.just",
                   "match": "[\\s]*[a-zA-Z0-9-_]*(=?)(.*)",
                   "captures": {
-                    "0": { "name": "variable.name.just" },
-                    "1": { "name": "constant.other.just" },
-                    "2": { "name": "variable.parameter.just" }
+                    "0": {
+                      "name": "variable.name.just"
+                    },
+                    "1": {
+                      "name": "constant.other.just"
+                    },
+                    "2": {
+                      "name": "variable.parameter.just"
+                    }
                   }
                 }
               ]
             },
-            "4": { "name": "support.type.property-name.just" }
+            "4": {
+              "name": "support.type.property-name.just"
+            }
           }
         }
       ]
