@@ -1,5 +1,5 @@
 # wonderful colors
-green  = "\\033[0;32m" # test
+green  = "\\033[0;32m"
 cyan   = "\\033[0;36m"
 clear  = "\\033[0m"
 

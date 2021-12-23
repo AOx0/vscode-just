@@ -1,6 +1,18 @@
 # just README
 
-This is the README for your extension "just". After writing up a brief description, we recommend including the following sections.
+
+
+# Installation
+
+```
+git clone https://github.com/AOx0/vscode-just
+cd vscode-just
+npm install -g vsce
+vsce package
+code --install-extension just-0.0.1.vsix
+```
+
+
 
 ## Features
 
